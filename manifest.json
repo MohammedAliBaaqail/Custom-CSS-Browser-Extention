@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Style Saver",
+  "version": "1.0",
+  "description": "Save custom CSS modifications for websites",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [{
+    "matches": ["<all_urls>"],
+    "js": ["content.js"]
+  }],
+  "background": {
+    "service_worker": "background.js"
+  }
+}
